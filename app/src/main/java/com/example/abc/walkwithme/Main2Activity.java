@@ -14,16 +14,14 @@ import android.widget.Toast;
 public class Main2Activity extends AppCompatActivity {
 
     private EditText inputName, inputPassword;
-    private TextInputLayout inputLayoutName, inputLayoutPassword;
     private Button btnSignIn, btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        inputLayoutName = (TextInputLayout) findViewById(R.id.input_layout_name);
-        inputLayoutPassword = (TextInputLayout) findViewById(R.id.input_layout_password);
         inputName = (EditText) findViewById(R.id.input_name);
         inputPassword = (EditText) findViewById(R.id.input_password);
         btnSignIn = (Button) findViewById(R.id.btn_signin);
@@ -51,10 +49,11 @@ public class Main2Activity extends AppCompatActivity {
     /**
      * Validating form
      */
-    private void signUp(){
-        Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+    private void signUp() {
+        Intent intent = new Intent(Main2Activity.this, Main3Activity.class);
         startActivity(intent);
     }
+
     private void submitForm() {
         if (!validateName()) {
             return;
@@ -64,19 +63,16 @@ public class Main2Activity extends AppCompatActivity {
             return;
         }
 
-        Toast.makeText(getApplicationContext(), "Thank You!", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(LoginActivity.this, About.class);
+        Intent intent = new Intent(Main2Activity.this, Main4Activity.class);
         intent.putExtra("name", inputName.getText().toString());
         startActivity(intent);
     }
 
     private boolean validateName() {
         if (inputName.getText().toString().trim().isEmpty()) {
-            inputLayoutName.setError(getString(R.string.err_msg_name));
+            Toast.makeText(getApplicationContext(), "Enter Your Username", Toast.LENGTH_SHORT).show();
             requestFocus(inputName);
             return false;
-        } else {
-            inputLayoutName.setErrorEnabled(false);
         }
 
         return true;
@@ -85,11 +81,8 @@ public class Main2Activity extends AppCompatActivity {
 
     private boolean validatePassword() {
         if (inputPassword.getText().toString().trim().isEmpty()) {
-            inputLayoutPassword.setError(getString(R.string.err_msg_password));
             requestFocus(inputPassword);
             return false;
-        } else {
-            inputLayoutPassword.setErrorEnabled(false);
         }
 
         return true;
