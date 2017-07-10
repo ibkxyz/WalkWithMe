@@ -36,14 +36,13 @@ public class Main2Activity extends AppCompatActivity {
                 submitForm();
             }
         });
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signUp();
             }
         });
-
-
     }
 
     /**
@@ -74,17 +73,14 @@ public class Main2Activity extends AppCompatActivity {
             requestFocus(inputName);
             return false;
         }
-
         return true;
     }
-
 
     private boolean validatePassword() {
         if (inputPassword.getText().toString().trim().isEmpty()) {
             requestFocus(inputPassword);
             return false;
         }
-
         return true;
     }
 

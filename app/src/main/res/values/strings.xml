@@ -19,4 +19,19 @@
     <string name="title_notifications">Notifications</string>
 
 
+    <!-- Spinner Values -->
+
+    <string-array name="security_question_array">
+        <item>--Select a security question--</item>
+        <item>What is the first name of your favorite uncle?</item>
+        <item>What is the name of your first car or bike?</item>
+        <item>What is your youngest child\'s nickname?</item>
+        <item>What was the name of your first pet?</item>
+        <item>What is your dream job?</item>
+        <item>In what city did you grow up?</item>
+        <item>What is the name of your first boss?</item>
+        <item>What was your childhood nickname?</item>
+    </string-array>
+
+
 </resources>

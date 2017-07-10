@@ -14,27 +14,57 @@
         android:layout_marginTop="20dp"
         android:src="@drawable/logo" />
 
+    <Chronometer
+        android:id="@+id/walkchrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
     <TextView
         android:id="@+id/tv_steps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_marginBottom="75dp"
-        android:layout_marginTop="150dp"
-        android:text="0 Steps Taken"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp"
+        android:layout_marginTop="100dp"
+        android:text="0"
         android:textColor="#fff"
-        android:textSize="48sp"
+        android:textSize="52sp"
         android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_step_steps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_steps"
+        android:layout_centerHorizontal="true"
+        android:text="Steps taken"
+        android:textColor="#fff"
+        android:textSize="18sp"/>
+
+</RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginLeft="0dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
 
         <Button
-            android:id="@+id/pause"
+            android:id="@+id/button_pause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -48,7 +78,7 @@
         
 
         <Button
-            android:id="@+id/btn_stop"
+            android:id="@+id/button_stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -58,8 +88,9 @@
             android:text="Stop Walk"
             android:textAllCaps="false"
             android:textColor="#fff" />
+
         <Button
-            android:id="@+id/restart"
+            android:id="@+id/button_restart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
