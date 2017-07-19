@@ -4,32 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_color"
+    android:background="@drawable/background"
     android:orientation="vertical"
-    android:padding="5dp">
+    android:padding="30dp">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
         android:src="@drawable/logo" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
-        android:layout_marginTop="50dp"
-        android:padding="10dp"
+        android:layout_gravity="center"
+        android:fontFamily="cursive"
+        android:text="walk with me"
+        android:textColor="#ffffff"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
         android:text="Walk with me is a humanitarian Non Governmental Organzaiton. We are passionate about helping orphaned children around the country. With every minute you walk, an amount of money is donated to a foundation for orphaned children. With us, every walk counts! "
         android:textAlignment="center"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:textSize="16dp" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="startWalk"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/bg_button"
+        android:onClick="startWalk"
         android:text="Start Walk"
         android:textAllCaps="false"
         android:textColor="#fff" />
