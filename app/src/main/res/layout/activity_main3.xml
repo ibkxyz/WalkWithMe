@@ -121,7 +121,6 @@
                     android:textColor="#000000"
                     android:textColorHint="#455A64" />
 
-
                 <Spinner
                     android:id="@+id/security_spinner"
                     android:layout_width="match_parent"
@@ -130,9 +129,7 @@
                     android:backgroundTint="#FFFFFF"
                     android:textColor="#FFFFFF">
 
-
                 </Spinner>
-
 
                 <EditText
                     android:id="@+id/input_security_answer"
